@@ -6,7 +6,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
-func getBooks(w http.ResponseWriter, r *http.Request) {
+func GetBooks(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r) 
 	title := vars["title"]
 

@@ -3,13 +3,14 @@ package main
 import (
 	"net/http"
 	"github.com/gorilla/mux"
+	"github.com/sucodev/golang-restapi/handlers"
 )
 
 func main() {
 
 	r := mux.NewRouter()
 
-	// r.HandleFunc("/books/{title}", handlers.getBooks)	
+	r.HandleFunc("/books/{title}", handlers.GetBooks).Methods("GET");	
 
 	http.ListenAndServe(":3333", r)
 
